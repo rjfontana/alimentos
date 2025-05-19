@@ -1,0 +1,35 @@
+drag-drop-alimentos
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arraste os alimentos para a categoria correta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-area">
+    <label for="playerName">Digite seu nome para participar:</label>
+    <input type="text" id="playerName" placeholder="Seu nome" maxlength="30">
+    <button id="startBtn">Começar</button>
+  </div>
+  <div id="game-area" style="display:none;">
+    <h1>Arraste os alimentos para a categoria correta</h1>
+    <div id="score"></div>
+    <div class="alimentos" id="alimentos"></div>
+    <div class="drop-zones">
+      <div class="drop-zone" data-accept="in-natura">In Natura</div>
+      <div class="drop-zone" data-accept="minimamente">Minimamente Processados</div>
+      <div class="drop-zone" data-accept="ultraprocessado">Ultraprocessados</div>
+    </div>
+    <div id="feedback"></div>
+    <button id="restartBtn" style="display:none;">Reiniciar</button>
+  </div>
+  <!-- Firebase App (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <!-- Firebase Database (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
